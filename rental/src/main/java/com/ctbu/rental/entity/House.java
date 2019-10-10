@@ -2,6 +2,7 @@ package com.ctbu.rental.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "HOUSE")
@@ -54,6 +55,10 @@ public class House {
 
     @Column(name = "STREET")
     private String street;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "HOUSE_ID")
+    private List<HouseTag> houseTags;
 
     public Long getId() {
         return id;
@@ -181,5 +186,13 @@ public class House {
 
     public void setStreet(String street) {
         this.street = street;
+    }
+
+    public List<HouseTag> getHouseTags() {
+        return houseTags;
+    }
+
+    public void setHouseTags(List<HouseTag> houseTags) {
+        this.houseTags = houseTags;
     }
 }
