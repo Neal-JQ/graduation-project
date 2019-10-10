@@ -29,4 +29,18 @@ public class LoginController {
         return "index";
     }
 
+    @GetMapping("/adminIndex")
+    public String redirectToAdminIndex() {
+        return "adminIndex";
+    }
+
+    @GetMapping("/userMaintenance")
+    public String redirectToUserMaintenance() {
+        return "admin/userMaintenance";
+    }
+
+    @GetMapping("/roleMaintenance")
+    public String redirectToRoleMaintenance() {
+        return "admin/roleMaintenance";
+    }
 }
