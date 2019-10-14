@@ -46,7 +46,7 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://101.132.148.131:3306/rims?zeroDateTimeBehavior=convertToNull&autoReconnect=true&tinyInt1isBit=false&useSSL=false
     username: root
-    password: chenggeworinipy
+    password: root
     testWhileIdle: true
     testOnBorrow: true
     validationQuery: SELECT 1

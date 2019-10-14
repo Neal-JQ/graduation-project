@@ -60,13 +60,4 @@ public class LoginController {
         return "adminIndex";
     }
 
-    @GetMapping("/userMaintenance")
-    public String redirectToUserMaintenance() {
-        return "admin/userMaintenance";
-    }
-
-    @GetMapping("/roleMaintenance")
-    public String redirectToRoleMaintenance() {
-        return "admin/roleMaintenance";
-    }
 }
